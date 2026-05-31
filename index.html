@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SETLIST BINGO</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <div class="panel">
+    <h2>セトリビンゴメーカー</h2>
+
+    <input id="bandInput" type="text" placeholder="バンド名">
+
+    <input id="detailInput" type="text" placeholder="2026.06.03 Zepp Nagoya">
+
+    <hr>
+
+    <h3>曲名</h3>
+
+    <input class="song" placeholder="①">
+    <input class="song" placeholder="②">
+    <input class="song" placeholder="③">
+    <input class="song" placeholder="④">
+    <input class="song" placeholder="⑤">
+    <input class="song" placeholder="⑥">
+    <input class="song" placeholder="⑦">
+    <input class="song" placeholder="⑧">
+    <input class="song" placeholder="⑨">
+
+    <hr>
+
+    <label>背景画像</label>
+    <input id="bgInput" type="file" accept="image/*">
+
+    <label>背景の暗さ</label>
+    <input id="overlaySlider" type="range" min="0" max="80" value="22">
+
+    <label>マス透明度</label>
+    <input id="cellOpacitySlider" type="range" min="5" max="80" value="22">
+
+    <label>マス高さ</label>
+    <input id="cellHeightSlider" type="range" min="55" max="140" value="85">
+
+    <button id="saveBtn">
+      PNG保存
+    </button>
+  </div>
+
+  <div id="captureArea" class="card">
+
+    <img id="bg">
+
+    <div id="overlay" class="overlay"></div>
+
+    <div class="content">
+
+      <div class="title">
+        <div class="smallTitle">
+          SETLIST BINGO
+        </div>
+
+        <div id="bandPreview" class="bigTitle">
+          PEOPLE 1
+        </div>
+      </div>
+
+      <div class="bingoWrap">
+        <div class="bingo">
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+
+      <div class="info">
+        <div id="detailPreview">
+          2026.06.03 Zepp Nagoya
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
