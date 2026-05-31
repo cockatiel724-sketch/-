@@ -1,0 +1,186 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  font-family:sans-serif;
+  background:#f4f4f4;
+  padding:16px;
+}
+.wrapper{
+  max-width:1000px;
+  margin:auto;
+}
+.panel{
+  background:white;
+  padding:16px;
+  border-radius:16px;
+  margin-bottom:20px;
+}
+.panel h2{
+  margin-bottom:12px;
+}
+.panel h3{
+  margin:12px 0 8px;
+}
+.panel label{
+  display:block;
+  margin-top:12px;
+  margin-bottom:4px;
+  font-size:14px;
+  font-weight:600;
+}
+input[type="text"]{
+  width:100%;
+  padding:12px;
+  margin-bottom:8px;
+  border:1px solid #ddd;
+  border-radius:10px;
+}
+input[type="range"]{
+  width:100%;
+}
+button{
+  width:100%;
+  margin-top:16px;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+.card{
+  width:min(100%,420px);
+  aspect-ratio:148/210;
+  margin:auto;
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+  background:#222;
+  box-shadow:
+  0 15px 40px rgba(0,0,0,.25);
+}
+#bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.22);
+}
+.content{
+
+  position:relative;
+  z-index:2;
+
+  height:100%;
+
+  display:grid;
+
+  grid-template-rows:
+  auto
+  1fr
+  auto;
+
+  padding:18px;
+
+  color:white;
+
+}
+.title{
+  text-align:center;
+  margin-bottom:18px;
+}
+.smallTitle{
+  font-size:12px;
+  letter-spacing:3px;
+  opacity:.9;
+  margin-bottom:6px;
+}
+.bigTitle{
+  font-size:28px;
+  font-weight:800;
+  line-height:1.1;
+}
+.bingoWrap{
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  width:100%;
+
+}
+
+.bingo{
+
+  width:100%;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:8px;
+
+}
+.cell{
+
+  height:60px;
+
+  width:100%;
+
+  background:rgba(255,255,255,.22);
+
+  border-radius:14px;
+
+  overflow:hidden;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:8px;
+
+  color:#111;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  line-height:1.2;
+
+  font-family:sans-serif;
+
+  backdrop-filter:blur(2px);
+
+  overflow-wrap:anywhere;
+
+  text-shadow:
+  0 0 3px rgba(255,255,255,.95),
+  0 0 6px rgba(255,255,255,.95),
+  0 0 10px rgba(255,255,255,.9),
+  0 0 14px rgba(255,255,255,.8);
+
+}
+.info{
+
+  text-align:center;
+
+  font-size:15px;
+
+  font-weight:700;
+
+}
